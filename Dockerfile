@@ -13,6 +13,7 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
       nginx=${NGINX_VERSION} \
       fusiondirectory=${FUSIONDIRECTORY_VERSION} \
+      fusiondirectory-plugin-argonaut \
       fusiondirectory-plugin-autofs \
       fusiondirectory-plugin-certificates \
       fusiondirectory-plugin-gpg \
