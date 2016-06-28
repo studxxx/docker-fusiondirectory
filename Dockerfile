@@ -17,6 +17,7 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys E184859262B4981F \
     fusiondirectory-plugin-ldapdump=${FUSIONDIRECTORY_VERSION} \
     fusiondirectory-plugin-ldapmanager=${FUSIONDIRECTORY_VERSION} \
     fusiondirectory-plugin-mail=${FUSIONDIRECTORY_VERSION} \
+    fusiondirectory-plugin-postfix=${FUSIONDIRECTORY_VERSION} \
     fusiondirectory-plugin-ssh=${FUSIONDIRECTORY_VERSION} \
     fusiondirectory-plugin-sudo=${FUSIONDIRECTORY_VERSION} \
     fusiondirectory-plugin-systems=${FUSIONDIRECTORY_VERSION} \
