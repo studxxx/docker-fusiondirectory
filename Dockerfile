@@ -44,6 +44,11 @@ RUN export TARGET=/etc/php5/fpm/pool.d/www.conf \
  && sed -i -e "s:^\(listen *= *\).*$:\1/run/php5-fpm.sock:" ${TARGET} \
  && unset TARGET
 
+COPY entrypoint.sh /sbin/entrypoint.sh
+RUN chmod 755 /sbin/entrypoint.sh
 COPY cmd.sh /sbin/cmd.sh
 RUN chmod 755 /sbin/cmd.sh
 COPY default /etc/nginx/sites-available/
+
+ENTRYPOINT ["/sbin/entrypoint.sh"]
+CMD ["/sbin/cmd.sh"]
