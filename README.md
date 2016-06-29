@@ -17,7 +17,7 @@ docker run -p 80:80 -p 443:443 \
   -e LDAP_DOMAIN="example.org" \
   -e LDAP_HOST="ldap.example.org" \
   -e LDAP_ADMIN_PASSWORD="password" \
-  -d hrektts/fusiondirectory
+  -d hrektts/fusiondirectory:latest
 ```
 
 Alternatively, you can link this image with previously launched LDAP container
@@ -29,7 +29,7 @@ docker run --name ldap -p 389:389 -p 636:636 \
   -e LDAP_DOMAIN="example.org" \
   -e LDAP_ADMIN_PASSWORD="password" \
   -e FD_ADMIN_PASSWORD="fdadminpwd" \
-  -d hrektts/fusiondirectory-openldap
+  -d hrektts/fusiondirectory-openldap:latest
 
 docker run --name fusiondirectory -p 80:80 -p 443:443 \
   --link ldap:ldap -d hrektts/fusiondirectory
