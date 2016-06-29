@@ -38,4 +38,4 @@ docker run --name fusiondirectory -p 10080:80 \
 Access `http://localhost/fd` with your browser and login using the administrator account:
 
 - username: **fd-admin**
-- password: **FD_ADMIN_PASSWORD** (default: **adminpassword**)
+- password: (the value you specified in FD_ADMIN_PASSWORD)
