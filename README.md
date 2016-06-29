@@ -32,5 +32,5 @@ docker run --name ldap -p 389:389 -p 636:636 \
   -d hrektts/fusiondirectory-openldap:latest
 
 docker run --name fusiondirectory -p 80:80 -p 443:443 \
-  --link ldap:ldap -d hrektts/fusiondirectory
+  --link ldap:ldap -d hrektts/fusiondirectory:latest
 ```
