@@ -1,7 +1,7 @@
 #!/usr/bin/env bats
 
 @test "initialize" {
-    docker run --label bats-type="test" -p 80:80
+    docker run --label bats-type="test" -p 80:80 \
         -e LDAP_DOMAIN="example.org" \
         -e LDAP_HOST="ldap.example.org" \
         -e LDAP_ADMIN_PASSWORD="password" \
