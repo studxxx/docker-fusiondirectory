@@ -1,0 +1,20 @@
+server {
+    listen 80;
+
+    root /usr/share/fusiondirectory/html;
+    index index.php;
+
+    server_name docker.vm;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ ^/.*\.php(/|$) {
+        expires off; # do not cache dynamic content
+        fastcgi_pass unix:/run/php5-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+        fastcgi_param DOCUMENT_ROOT $realpath_root;
+        include /etc/nginx/fastcgi_params;
+    }
+}

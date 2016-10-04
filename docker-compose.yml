@@ -26,3 +26,5 @@ services:
       - LDAP_DOMAIN=example.org
       - LDAP_HOST=openldap
       - LDAP_ADMIN_PASSWORD=adminpwd
+    volumes:
+      - ./nginx/:/etc/nginx/sites-available/
